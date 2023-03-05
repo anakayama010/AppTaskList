@@ -22,10 +22,9 @@ class Project:
 # 名称変更のためのポップアップを表示する
 def input_name_window():
 	
-	#password = simpledialog.askstring('パスワード入力', 'パスワードを入力してください')
 	input = tk.Tk()
 	input.geometry('400x150')
-	input.title('名称入力画面')
+	input.title('window')
 	input.lift()
 	
 	lbl = tk.Label(input, text='名称を入力してください。')
@@ -36,19 +35,19 @@ def input_name_window():
 	btn.place(x=250, y=75)
 
 	input.mainloop()
-
-# 名称変更ダイアログボックスを表示
-#def input_name_dialog():
-
 	
 
 
+	
+
+#project_name = simpledialog.askstring('dialogbox', 'プロジェクト名を入力してください。')
+project_name = input_name_window()
+
 root = tk.Tk()
 root.geometry('600x400')
-root.title('タスクリスト')
-tk.Tk().withdraw()
+root.title(project_name)
 
-input_name_window()
+root.mainloop()
 
 
 
