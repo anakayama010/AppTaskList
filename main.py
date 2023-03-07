@@ -8,19 +8,6 @@ root.title("タスクリスト")
 root.geometry("600x800")
 
 
-class Project:
-    
-	name = ""
-
-	def __init__(self):
-		self.name = Create()
-
-	def get_name(self):
-		return self.name
-
-	def set_name(self, name):
-		self.name = name
-
 class AskProjectName:
 
 	name = ""
@@ -64,8 +51,7 @@ class CreateProject:
 		self.label = tk.Label(self.frame, text=p_name)
 		self.label.pack(anchor=tk.W)
 		self.canvas.pack(anchor=tk.W)
-	
-	
+
 
 # メニューから呼び出される関数
 def create_project():
@@ -77,10 +63,7 @@ def create_project():
 		break
 	
 	
-	
-	
 
-	
 
 def close_disp():
     pass
